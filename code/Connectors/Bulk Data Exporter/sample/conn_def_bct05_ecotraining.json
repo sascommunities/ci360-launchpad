@@ -1,0 +1,29 @@
+[ {
+  "connectorName" : "Bulk Connector Export Data To Local",
+  "connectorDescription" : "Bulk Connector Export Data To Local",
+  "isConnectorEnabled" : true,
+  "connectorSupportEmail" : "email@example.com",
+  "endpoints" : [ {
+    "endpointName" : "Bulk Connector Export Data To Local Endpoint",
+    "endpointDescription" : "Bulk Connector Export Data To Local",
+    "isEndpointEnabled" : true,
+    "endpointUrl" : "http://127.0.0.1:5000/export?format={{$format}}",
+    "endpointHttpMethod" : "POST",
+    "endpointTimeoutValue" : 15,
+    "endpointTimeoutUnit" : "seconds",
+    "isScheduled" : false,
+    "endpointUrlParameters" : [ {
+      "key" : "format",
+      "value" : "$.sendParameters.export_format",
+      "description" : "",
+      "sequence" : 1
+    } ],
+    "endpointAuth" : {
+      "type" : "noauth",
+      "data" : null
+    }
+  } ],
+  "connectorInvocationType" : "BULK",
+  "direction" : "OUTBOUND",
+  "showInDashboard" : false
+} ]

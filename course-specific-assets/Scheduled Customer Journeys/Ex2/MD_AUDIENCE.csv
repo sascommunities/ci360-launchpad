@@ -1,0 +1,3 @@
+audience_id,audience_nm,audience_desc,created_user_nm,audience_expiration_val,audience_schedule_flg,audience_source_nm,audience_data_source_nm,create_dttm,delete_dttm
+3679ced6-be40-4302-ad8c-84259ccf7b19,Active members,Audience created in SAS code,API-bct05-roel,30,0,Active members,api,16MAY2025:16:30:50.013000,
+f2490bac-9b4a-4620-a47e-312ebf772e07,Streaming TV subscription renewal,Created via the API,API-bct36-sj_ex,10,0,Streaming TV subscription renewal,api,28MAY2025:13:47:59.858000,

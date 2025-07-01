@@ -1,0 +1,60 @@
+{
+	"name": "Test_Data",
+	"source": "customer_defined",
+	"expiration": 90,
+	"daysUntilExpires": 90,
+	"audienceType": "upload",
+	"identityType": "subject_id",
+	"identityColumnName": "Subject_ID",
+	"emailColumnName": "Email_Address",
+	"dataItems": [
+		{
+			"columnNumber": 1,
+			"label": "Subject_ID",
+			"dataType": "character",
+			"usedForTracking": false
+		},
+		{
+			"columnNumber": 2,
+			"label": "Channel_Preference",
+			"dataType": "character",
+			"usedForTracking": true
+		},
+		{
+			"columnNumber": 3,
+			"label": "Mobile_Number",
+			"dataType": "character",
+			"usedForTracking": true
+		},
+		{
+			"columnNumber": 4,
+			"label": "Email_Address",
+			"dataType": "character",
+			"usedForTracking": true
+		},
+		{
+			"columnNumber": 5,
+			"label": "First_Name",
+			"dataType": "character",
+			"usedForTracking": true
+		},
+		{
+			"columnNumber": 6,
+			"label": "Last_Name",
+			"dataType": "character",
+			"usedForTracking": true
+		},
+		{
+			"columnNumber": 7,
+			"label": "Offer_Code",
+			"dataType": "character",
+			"usedForTracking": true
+		},
+		{
+			"columnNumber": 8,
+			"label": "Segment",
+			"dataType": "character",
+			"usedForTracking": true
+		}
+	]
+}

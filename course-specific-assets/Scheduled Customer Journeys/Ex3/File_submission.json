@@ -1,0 +1,6 @@
+{
+  "name": "Test data upload job for audience - Test_Data",
+  "audienceId": "<<The audience ID you received from the earlier Create Audience API.>>",
+  "fileLocation": "<<Update the File location URL you received from the earlier Create File Location API.>>",
+  "headerRowIncluded": true
+}

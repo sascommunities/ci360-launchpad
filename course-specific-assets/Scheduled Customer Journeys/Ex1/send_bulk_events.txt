@@ -1,0 +1,3 @@
+ExternalEventName,subject_id,372,AttributeName1,Value1,AttributeName2,Value2,AttributeName3,Value3
+ExternalEventName,subject_id,373,AttributeName1,Value1,AttributeName2,Value2,AttributeName3,Value3
+ExternalEventName,subject_id,374,AttributeName1,Value1,AttributeName2,Value2,AttributeName3,Value3

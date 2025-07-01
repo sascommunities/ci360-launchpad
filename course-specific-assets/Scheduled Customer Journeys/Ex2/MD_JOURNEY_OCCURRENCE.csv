@@ -1,0 +1,6 @@
+journey_id,journey_version_id,journey_occurrence_id,journey_occurrence_num,aud_occurrence_id,start_dttm,end_dttm,execution_status,error_messages,started_by_nm,occurrence_type_nm,num_of_contacts_entered,num_of_contacts_suppressed
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,,e0c1892d-c935-4b4a-8323-3d30d8a67f11,1,e972d315-0cc9-48ca-b0dc-1eb53db0ea06,03JUN2025:11:42:29.295000,04JUN2025:09:04:26.826000,COMPLETED,,porrov@bct36,ON_DEMAND,5,0
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,,5e1348a2-7b44-4540-aa4a-b23eb03a9a57,2,e972d315-0cc9-48ca-b0dc-1eb53db0ea06,03JUN2025:13:17:35.306000,03JUN2025:13:17:44.000000,COMPLETED,,porrov@bct36,ON_DEMAND,0,6
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,,3952b473-86a0-4f90-92f2-24d95f637c89,3,e972d315-0cc9-48ca-b0dc-1eb53db0ea06,04JUN2025:17:04:15.536000,04JUN2025:17:04:25.512000,COMPLETED,,porrov@bct36,ON_DEMAND,10,0
+8bc86138-ceb9-4f6c-b12e-6a5b0b5d4a49,,c73bd967-5d88-409b-b480-95da710edb6c,1,0d98b648-a513-4f62-8615-dc4c108c9312,22MAY2025:15:32:54.228000,22MAY2025:16:35:05.170000,COMPLETED,,porrov@bct05,ON_DEMAND,8,0
+8bc86138-ceb9-4f6c-b12e-6a5b0b5d4a49,,a265f8ec-7866-4d7a-ac86-3d1d323a9a60,2,0d98b648-a513-4f62-8615-dc4c108c9312,22MAY2025:20:20:49.724000,22MAY2025:21:23:30.048000,COMPLETED,,porrov@bct05,ON_DEMAND,8,0

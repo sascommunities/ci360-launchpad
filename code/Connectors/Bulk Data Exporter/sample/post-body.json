@@ -1,0 +1,24 @@
+{
+  "task": {
+    "occurrenceId": "ad03be35-aedd-4cfe-9398-4fac0d113ef9",
+    "taskId": "a0ae0669-6c39-45af-9af7-b8451b800282",
+    "taskName": "Seminar Attendance List",
+    "taskVersionId": "y_pa336pmrnmirKSDvZR3E0orjwLmc.Q",
+    "outboundEventName": "ctt_export_user_details"
+  },
+  "tenant": {
+    "externalTenantId": "3e751191f100013b67637678",
+    "tenantMoniker": "bct01b"
+  },
+  "contactResponse": {
+    "responseTrackingCode": "bb969091-8f6a-4193-a6d5-424387e8eae0"
+  },
+  "presignedUrls": {
+    "metadataFile": "url.....",
+    "dataFile": "url..."
+  },
+  "sendParameters": {
+    "seminar": "Learn Personal Finance",
+    "seminar_type": "In-Person"
+  }
+}

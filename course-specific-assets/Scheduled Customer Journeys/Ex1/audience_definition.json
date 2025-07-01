@@ -1,0 +1,42 @@
+{
+    "name": "Streaming TV subscription renewal",
+    "description": "Created via the API",
+    "expiration": 10,
+    "source": "customer_defined_datasource",
+    "identityType": "customer_id",
+    "iconName": "super",
+    "identityColumnName": "Customer ID",
+    "emailColumnName": "Email Address",
+    "dataItems": [
+        {
+            "columnNumber": 1,
+            "label": "Customer ID",
+            "dataType": "character",
+            "usedForTracking": "false"
+        },
+        {
+            "columnNumber": 2,
+            "label": "Email Address",
+            "dataType": "character",
+            "usedForTracking": "false"
+        },
+        {
+            "columnNumber": 3,
+            "label": "First Name",
+            "dataType": "character",
+            "usedForTracking": "false"
+        },
+        {
+            "columnNumber": 4,
+            "label": "Contract type",
+            "dataType": "character",
+            "usedForTracking": "false"
+        },
+        {
+            "columnNumber": 5,
+            "label": "Loyalty tier",
+            "dataType": "character",
+            "usedForTracking": "false"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+journey_id,journey_version_id,journey_node_id,node_type,node_nm,previous_node_id,next_node_id
+8bc86138-ceb9-4f6c-b12e-6a5b0b5d4a49,1,id-4cc1913f-6800-41b9-9729-6e0e242e3,AUDIENCE,Active members,,id-8c2c967d-487f-4e72-bcd5-841e00134
+8bc86138-ceb9-4f6c-b12e-6a5b0b5d4a49,1,id-8c2c967d-487f-4e72-bcd5-841e00134,TOUCHPOINT,Flash Sale - June 2025,id-4cc1913f-6800-41b9-9729-6e0e242e3,id-f5b682a1-4f7f-41a2-892f-c24932f00
+8bc86138-ceb9-4f6c-b12e-6a5b0b5d4a49,1,id-f5b682a1-4f7f-41a2-892f-c24932f00,END,End: null,id-8c2c967d-487f-4e72-bcd5-841e00134,
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-5fbb9ef6-9d51-4754-b269-c5493a8b9,AUDIENCE,Streaming TV subscription renewal,,id-33223488-4183-4664-ae1e-5a83ec360
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-33223488-4183-4664-ae1e-5a83ec360,SPLIT,,id-5fbb9ef6-9d51-4754-b269-c5493a8b9,id-47079f28-c00f-42f4-a103-74226301a
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-47079f28-c00f-42f4-a103-74226301a,TOUCHPOINT,TV Subscription Email 1 for pre-paid  customers,id-33223488-4183-4664-ae1e-5a83ec360,id-00a92a01-574d-4241-b819-6a009cad6
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-c3041c2a-71d9-48e9-823a-dc53e777d,TOUCHPOINT,TV Subscription Email 1 for post-paid  customers,id-33223488-4183-4664-ae1e-5a83ec360,id-ef503056-200b-4f73-a3e7-3e77c7dc6
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-00a92a01-574d-4241-b819-6a009cad6,WAIT,,id-47079f28-c00f-42f4-a103-74226301a,id-4f0f7d71-2856-4531-9b5a-febdd60ff
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-ef503056-200b-4f73-a3e7-3e77c7dc6,WAIT,,id-c3041c2a-71d9-48e9-823a-dc53e777d,id-e6569462-78cf-4a31-a3e4-38170447a
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-4f0f7d71-2856-4531-9b5a-febdd60ff,SPLIT,,id-00a92a01-574d-4241-b819-6a009cad6,id-b5ae9668-7bff-49d4-ad83-12dd374e8
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-b5ae9668-7bff-49d4-ad83-12dd374e8,TOUCHPOINT,TV Subscription Email 2 for pre-paid  customers,id-4f0f7d71-2856-4531-9b5a-febdd60ff,id-0f7a9c41-0845-4b70-bb7e-7f4626cb5
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-0f7a9c41-0845-4b70-bb7e-7f4626cb5,END,End: null,id-b5ae9668-7bff-49d4-ad83-12dd374e8,
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-3464d9db-8f3f-46a8-9f14-afc24bfba,END,End: null,id-4f0f7d71-2856-4531-9b5a-febdd60ff,
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-e6569462-78cf-4a31-a3e4-38170447a,SPLIT,,id-ef503056-200b-4f73-a3e7-3e77c7dc6,id-a94c6a59-29af-4037-b811-e55a4d3c9
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-a94c6a59-29af-4037-b811-e55a4d3c9,END,End: null,id-e6569462-78cf-4a31-a3e4-38170447a,
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-31d56f61-a8ce-41d7-a6ff-581527217,TOUCHPOINT,TV Subscription Email 2 for post-paid  customers,id-e6569462-78cf-4a31-a3e4-38170447a,id-6c1a1514-f2f1-4599-b6bc-f818b43d4
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,1,id-6c1a1514-f2f1-4599-b6bc-f818b43d4,END,End: null,id-31d56f61-a8ce-41d7-a6ff-581527217,

@@ -1,0 +1,5 @@
+occurrence_id,object_id,object_version_id,object_type_nm,occurrence_no,occurrence_type_nm,started_by_nm,start_tm,end_tm,execution_status_cd,properties_map_doc
+aebb43f9-ab8e-4743-9322-a9ee4c81be7e,56437c11-5bbe-4ff7-aa0c-fb2125eda44b,,task,1,On demand,porrov@bct05,22MAY2025:15:33:25.162000,22MAY2025:15:35:03.257000,Success,
+e7c6f6a0-ec2a-4f9c-89ea-d3d98845a3a1,56437c11-5bbe-4ff7-aa0c-fb2125eda44b,,task,2,On demand,porrov@bct05,22MAY2025:20:21:03.606000,22MAY2025:20:22:33.419000,Success,
+b5efa7f4-f0d9-4dcc-80f6-23fb0f469f2a,774c8c07-821f-4472-b934-81a553667e76,,task,1,On demand,porrov@bct36,03JUN2025:11:42:43.702000,03JUN2025:11:44:09.252000,Success,
+fda04a55-a1ff-49e4-95a2-6cb825373f29,a2dab79d-849d-4e94-8bf6-64a238016361,,task,1,On demand,porrov@bct36,03JUN2025:11:42:43.965000,03JUN2025:11:44:24.398000,Success,

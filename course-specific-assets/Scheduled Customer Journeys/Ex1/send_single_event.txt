@@ -1,0 +1,3 @@
+eventName     = Subscription Purchase
+customer_id    = 106
+journey_purpose = Cross sell

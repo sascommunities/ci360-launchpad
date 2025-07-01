@@ -1,0 +1,6 @@
+task_id,task_status_cd,task_version_id,event_id,primary_metric_flg,secondary_metric_flg,targeting_flg
+56437c11-5bbe-4ff7-aa0c-fb2125eda44b,active,yeve7Ek2YEqhmI3S2QUeof8cFyzgQeXk,a9e752ed-48a7-4ff4-8923-5ba07b49d047,1,0,0
+a2dab79d-849d-4e94-8bf6-64a238016361,active,ASDYlqyH.E2hCh5dSCPLZTTmBpnzMXIf,d9dff927-7165-46db-bbc6-97651ecad86f,1,0,0
+34748830-141a-4a05-a1fe-0feac0ce3a35,active,53ExSMnFv.EE64nuwcq1QhIJZnc6B2Bn,d9dff927-7165-46db-bbc6-97651ecad86f,1,0,0
+5894352b-d5b9-4000-92e7-00d39448b927,active,eBGgqMu52XZCLsRZsDLMjioDZdw2.tWm,d9dff927-7165-46db-bbc6-97651ecad86f,1,0,0
+774c8c07-821f-4472-b934-81a553667e76,active,PoS0_0B19PIM6cL2k_287.m1rli6t9Aj,d9dff927-7165-46db-bbc6-97651ecad86f,1,0,0

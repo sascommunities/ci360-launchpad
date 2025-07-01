@@ -1,0 +1,4 @@
+task_id,task_status_cd,task_version_id,valid_from_dttm,valid_to_dttm,property_nm,property_datatype_nm,property_val
+56437c11-5bbe-4ff7-aa0c-fb2125eda44b,active,yeve7Ek2YEqhmI3S2QUeof8cFyzgQeXk,22MAY2025:15:32:37.000000,,GMS_Deliverable_ID,INTEGER,111
+56437c11-5bbe-4ff7-aa0c-fb2125eda44b,active,yeve7Ek2YEqhmI3S2QUeof8cFyzgQeXk,22MAY2025:15:32:37.000000,,E_text_intro,TEXT,Indicate which is the last day for responses to be counted
+56437c11-5bbe-4ff7-aa0c-fb2125eda44b,active,yeve7Ek2YEqhmI3S2QUeof8cFyzgQeXk,22MAY2025:15:32:37.000000,,E_Intro,TEXT,"These are custom properties specifically for the Email Task Type. You will notice at the top right hand side that you are in the planning view, not design view."

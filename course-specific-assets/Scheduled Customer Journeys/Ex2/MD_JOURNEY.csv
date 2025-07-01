@@ -1,0 +1,3 @@
+journey_id,journey_version_id,journey_nm,journey_status_cd,created_user_nm,last_activated_dttm,purpose_id,target_goal_type_nm,target_goal_qty,control_group_flg,activated_user_nm
+8bc86138-ceb9-4f6c-b12e-6a5b0b5d4a49,,Flash Sale June 2025,active,porrov@bct05,22MAY2025:15:32:38.261000,,,,0,porrov@bct05
+5d1261ed-a577-4eb9-bdbf-82a9d456f3e3,,TV Subscription,active,porrov@bct36,03JUN2025:11:42:16.382000,,,,0,porrov@bct36

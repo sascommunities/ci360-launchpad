@@ -1,0 +1,5 @@
+event_id,event_nm,event_status_cd,event_version_id,valid_from_dttm,valid_to_dttm,event_desc,created_user_nm,owner_nm,last_published_dttm,event_type_nm,event_subtype_nm,channel_nm
+4f5a8e45-54d8-4e82-8e6d-9aff47527131,A_B_test_trig,active,e0ctfSkfZGke5tv5JsWAM_qVyHXOpt6I,22MAY2025:11:55:59.000000,,,porrov@bct05,porrov@bct05,22MAY2025:11:55:58.736000,external,,external
+b1f23847-0b7a-4331-885a-ae2c11beb87e,Ins Flow Completed,active,opG9U8Z_M7ACjPGwb2DwVouSuPwgmc4V,15APR2025:08:15:50.000000,,,porrov,porrov@bct36,15APR2025:08:15:49.300000,external,,external
+824b5054-2165-4914-8dab-4a4eb6486b2d,Online Purchase,active,ZfA2R4kk5s6aPP4ZCPdKsf3TKHzoBWtz,28MAY2025:15:03:45.000000,,,porrov,porrov@bct36,28MAY2025:15:03:44.909000,external,,external
+4e810e24-b5bd-493a-9825-624ca06f768f,Journey Drop,active,30DQLyRWX6eqtd.urQBifcwNQSa55LKG,28MAY2025:15:05:21.000000,,,porrov,porrov@bct36,28MAY2025:15:05:20.190000,external,,external
