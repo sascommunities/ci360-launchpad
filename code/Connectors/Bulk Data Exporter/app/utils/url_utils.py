@@ -32,18 +32,17 @@ def download_url_content(url):
     """Download content from the given URL"""
     try:
         proxies = None
-        proxy_auth = None  # Initialize proxy_auth
         if current_app.config['PROXY_URL']:
             proxy_url = current_app.config['PROXY_URL']
             if current_app.config['PROXY_USERNAME'] and current_app.config['PROXY_PASSWORD']:
-                proxy_auth = (current_app.config['PROXY_USERNAME'], current_app.config['PROXY_PASSWORD'])
+                proxy_url = proxy_url.replace("://", f"://{current_app.config['PROXY_USERNAME']}:{current_app.config['PROXY_PASSWORD']}@")
             proxies = {
                 "http": proxy_url,
                 "https": proxy_url,
             }
             log.info(f"Using proxy: {proxy_url}")
 
-        response = requests.get(url, proxies=proxies, auth=proxy_auth)
+        response = requests.get(url, proxies=proxies)
         if response.status_code == 200:
             return response.content
         else:
