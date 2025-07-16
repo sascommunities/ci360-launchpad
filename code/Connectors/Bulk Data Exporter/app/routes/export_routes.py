@@ -62,7 +62,7 @@ def export():
                 format = request.args.get('format', 'csv').lower()
                 log.info(f"Requested format: {format}")
                 try:
-                    df = pd.read_csv(BytesIO(data_content), dtype=str)  # Read all columns as strings to preserve data types
+                    df = pd.read_csv(BytesIO(data_content), dtype=str, header=None)
                     df.columns = column_names
                     if format == 'csv':
                         csv_content = df.to_csv(index=False, line_terminator='\n')
