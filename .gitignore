@@ -3,3 +3,4 @@ ignore/*.*
 *.log
 *.tmp
 *.bak
+course-specific-assets/APIs/Ex1/tenant-config.ini
