@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
+    <title></title>
+  </head>
+  <body>
+    <div class="testimonial-header gradient-animation">
+      <h3>{{plan_name}}</h3>
+    </div>
+    <p class="testimonial-text">Get the best coverage with our us.</p>
+    <div class="client-info">
+      <div class="client-details">
+        <a href="{{plan_url}}">
+          <h5 class="gradient-animation">Buy the plan now!</h5>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

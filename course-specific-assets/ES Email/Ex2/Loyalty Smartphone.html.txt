@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <h3>Your Reward is Here!</h3>
+      <p>Get a {{smartphone_name}} with {{discount}} % Now.</p>
+      <a href="{{smartphone_url}}" class="btn-primary">Buy Now</a>
+      <span class="guarantee"><i class="bi bi-shield-check"></i> 2 day delivery available.</span>
+    </div>
+  </body>
+</html>

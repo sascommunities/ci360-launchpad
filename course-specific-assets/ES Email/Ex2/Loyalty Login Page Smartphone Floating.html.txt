@@ -1,0 +1,9 @@
+<html>
+  <head>
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
+    <title></title>
+  </head>
+  <body>
+    <img src="https://telco.cidemo.sas.com/img/products/S1012-04.jpeg" alt="Abstract Fluid Shape" class="fluid-img" />
+  </body>
+</html>
