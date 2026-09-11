@@ -1,0 +1,86 @@
+# Deployment for the decision container (Step 3), running as TWO replicas ("two nodes").
+#
+# Placeholders to substitute before applying:
+#   - decision-placeholder  -> your decision's unique_name (DNS-safe, lowercase). Replace
+#                              ALL occurrences.
+#   - ${IMAGE_URI}          -> the full image URI for your decision container.
+#   - SAS_SCR_APP_PATH      -> update the value to match your decision name / route.
+#
+# If your image is publicly pullable (or already present in Docker Desktop's local image
+# store), delete the `imagePullSecrets` block entirely — it's only needed for private
+# registries (see Step 3, section 5.4 in the guide).
+#
+# For BATCH mode, add an extra env var after SAS_SCR_APP_PATH:
+#     - name: SAS_SCR_REST_API_TYPE
+#       value: "BATCH"
+#   and suffix the resource name with "-b" so realtime and batch variants can coexist.
+#
+# Usage (see Step 3 in the guide for the full substitution command):
+#   (Get-Content manifests\06-decision-deployment.yaml -Raw) `
+#       -replace 'decision-placeholder', $decisionName `
+#       -replace '\$\{IMAGE_URI\}',      $imageUri |
+#       kubectl apply -f -
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: decision-placeholder
+  namespace: ci360-shed-hues
+  labels:
+    app: decision-placeholder
+    managed-by: hands-on-local-deploy
+spec:
+  replicas: 2   # <-- "two nodes": two decision pods, load-balanced by the Service
+  selector:
+    matchLabels:
+      app: decision-placeholder
+  template:
+    metadata:
+      labels:
+        app: decision-placeholder
+    spec:
+      imagePullSecrets:
+        - name: decision-pull-secret
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: decision-placeholder
+          image: "${IMAGE_URI}"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SAS_SCR_APP_PATH
+              value: "/decision-placeholder"
+            - name: API_USER
+              valueFrom:
+                secretKeyRef:
+                  name: api-user-secret
+                  key: user-id
+            - name: API_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: api-user-secret
+                  key: user-secret
+          readinessProbe:
+            tcpSocket:
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 3
+            failureThreshold: 10
+          volumeMounts:
+            - name: db-secret
+              mountPath: /opt/scr/secrets/db
+              readOnly: true
+            - name: decision-temp
+              mountPath: /decision/temp
+            - name: arbitration-scores
+              mountPath: /opt/scr/arbitration_score
+              readOnly: true
+      volumes:
+        - name: db-secret
+          secret:
+            secretName: db-credentials
+        - name: decision-temp
+          emptyDir: {}
+        - name: arbitration-scores
+          configMap:
+            name: decision-scores

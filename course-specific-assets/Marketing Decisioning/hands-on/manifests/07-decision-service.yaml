@@ -1,0 +1,24 @@
+# ClusterIP Service for the decision container.
+#
+# Placeholder to substitute: decision-placeholder -> your decision's unique_name
+# (must match 06-decision-deployment.yaml).
+#
+# Usage:
+#   (Get-Content manifests\07-decision-service.yaml -Raw) `
+#       -replace 'decision-placeholder', $decisionName |
+#       kubectl apply -f -
+#
+# Access it from your machine via port-forwarding:
+#   kubectl port-forward svc/<decision-name> 8080:8080 -n ci360-shed-hues
+apiVersion: v1
+kind: Service
+metadata:
+  name: decision-placeholder
+  namespace: ci360-shed-hues
+spec:
+  type: ClusterIP
+  selector:
+    app: decision-placeholder
+  ports:
+    - port: 8080
+      targetPort: 8080

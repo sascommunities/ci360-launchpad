@@ -1,0 +1,50 @@
+# Helm values override for the sas-marketing-decisioning chart (Step 2).
+#
+# Key decision for this LOCAL/learning deployment: postgresql-ha stays ENABLED (the
+# chart's default) so SubjectContact gets its own built-in PostgreSQL — no external
+# database to stand up. We just right-size it for a single-node laptop cluster instead
+# of the 3-replica default, and point storageClass at "" so it uses whatever default
+# StorageClass the cluster provides (hostpath on Docker Desktop).
+#
+# ${TENANT_HOST} and ${FLEET_API_GW} are substituted at deploy time (see Step 2 in the guide):
+#
+#   $tenantHost = ($env:TENANT_URL -replace '^https?://' -replace '/.*$')
+#   (Get-Content manifests\04-subjectcontact-values.yaml -Raw) `
+#       -replace '\$\{TENANT_HOST\}', $tenantHost `
+#       -replace '\$\{FLEET_API_GW\}', $env:FLEET_API_GW |
+#       helm upgrade --install sas-marketing-decisioning ci360-helm-charts/sas-marketing-decisioning `
+#         -n ci360-shed-hues-sub -f - --timeout=600s
+global:
+  ExternalGatewayHost: "${TENANT_HOST}"
+  reporting:
+    # CDC/reporting is enabled by chart default (postgresql-ha's logical replication
+    # settings get applied automatically). It still needs a valid Fleets API gateway
+    # URL for your tenant's environment — set $env:FLEET_API_GW before running Step 2
+    # (sample: https://fleetsapigw-training.ci360.sas.com/).
+    enabled: true
+    fleetsApiGatewayUrl: "${FLEET_API_GW}"
+
+subjectcontact:
+  namespace:
+    create: false
+  replicaCount: 1
+
+# Built-in PostgreSQL-HA subchart stays ENABLED — this is the whole point of Step 2!
+# We just right-size it for a laptop instead of the chart's 3-replica default.
+postgresql-ha:
+  enabled: true
+  postgresql:
+    replicaCount: 1
+    resources:
+      requests:
+        memory: 512Mi
+        cpu: 250m
+      limits:
+        memory: 1Gi
+        cpu: 500m
+  pgpool:
+    replicaCount: 1
+  persistence:
+    enabled: true
+    storageClass: ""
+    size: 2Gi

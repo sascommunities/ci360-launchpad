@@ -1,0 +1,22 @@
+# The three namespaces used throughout this hands-on guide.
+#
+#   ci360-shed-hues-pg   -> PostgreSQL for customer/decision data (Step 1)
+#   ci360-shed-hues-sub  -> SubjectContact + its own built-in PostgreSQL (Step 2)
+#   ci360-shed-hues      -> Decision container(s) (Step 3)
+#
+# Usage:
+#   kubectl apply -f manifests\00-namespaces.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ci360-shed-hues-pg
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ci360-shed-hues-sub
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ci360-shed-hues

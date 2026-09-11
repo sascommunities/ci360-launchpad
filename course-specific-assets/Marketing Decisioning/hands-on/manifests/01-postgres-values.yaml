@@ -1,0 +1,22 @@
+# Helm values for the Bitnami PostgreSQL chart used in Step 1.
+#
+# Docker Desktop already ships a default "hostpath" StorageClass, so — unlike a cloud
+# cluster — there's no need to set primary.persistence.storageClass here at all.
+#
+# Usage:
+#   helm upgrade --install ci360-postgres bitnami/postgresql `
+#     -n ci360-shed-hues-pg `
+#     -f manifests\01-postgres-values.yaml `
+#     --set=auth.database=$env:PG_DATABASE `
+#     --set=auth.username=$env:PG_USER `
+#     --set=auth.password=$env:PG_PASSWORD `
+#     --timeout=300s
+primary:
+  persistence:
+    enabled: true
+    size: 2Gi
+  resources:
+    requests:
+      memory: 256Mi
+    limits:
+      memory: 512Mi
