@@ -24,27 +24,18 @@ global:
     enabled: true
     fleetsApiGatewayUrl: "${FLEET_API_GW}"
 
-subjectcontact:
-  namespace:
-    create: false
-  replicaCount: 1
-
-# Built-in PostgreSQL-HA subchart stays ENABLED — this is the whole point of Step 2!
-# We just right-size it for a laptop instead of the chart's 3-replica default.
-postgresql-ha:
+postgres:
   enabled: true
-  postgresql:
-    replicaCount: 1
-    resources:
-      requests:
-        memory: 512Mi
-        cpu: 250m
-      limits:
-        memory: 1Gi
-        cpu: 500m
-  pgpool:
-    replicaCount: 1
-  persistence:
-    enabled: true
-    storageClass: ""
+
+  # Install the cluster-wide operator as part of this Helm release.
+  installOperator: true
+  instances: 1
+
+
+
+  storage:
     size: 2Gi
+    # storageClassName must be set to a StorageClass available in your cluster,
+    # or left empty ("") to use the cluster's default StorageClass.
+    storageClassName: ""
+

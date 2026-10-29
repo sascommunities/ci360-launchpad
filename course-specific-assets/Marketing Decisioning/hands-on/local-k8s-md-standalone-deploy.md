@@ -107,7 +107,7 @@ hands-on/
 
 | # | Requirement | Why you need it |
 |---|---|---|
-| 1 | **Docker Desktop** with **Kubernetes enabled** | This *is* the cluster. Same on Windows and Mac. |
+| 1 | **Docker Desktop** with **Kubernetes enabled**. Cluster Type used is **kubeadm** | This *is* the cluster. Same on Windows and Mac. |
 | 2 | At least **4 vCPUs / 8 GB RAM** allocated to Docker Desktop | Two PostgreSQL instances + SubjectContact + decision pods run side by side. |
 | 3 | `kubectl` pointed at the `docker-desktop` context | `kubectl config use-context docker-desktop` |
 | 4 | `helm` v3+ | Installs the PostgreSQL and SubjectContact charts. |
@@ -435,8 +435,8 @@ imageUri="REPLACE_ME/your-image:tag"
 $pgHost = "ci360-postgres-postgresql.ci360-shed-hues-pg.svc.cluster.local"
 $pgPort = "5432"
 
-$subjectContactPgHost = "sas-marketing-decisioning-postgresql-ha-pgpool.ci360-shed-hues-sub.svc.cluster.local"
-$subjectContactPgPasswordB64 = kubectl get secret subjectcontact-pg-auth -n ci360-shed-hues-sub -o jsonpath='{.data.password}'
+$subjectContactPgHost = "sas-marketing-decisioning-cnpg-rw.ci360-shed-hues-sub.svc.cluster.local"
+$subjectContactPgPasswordB64 = kubectl get secret subjectcontact-cnpg-auth -n ci360-shed-hues-sub -o jsonpath='{.data.password}'
 $subjectContactPgPassword = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($subjectContactPgPasswordB64))
 
 (Get-Content manifests\05-db-credentials-secret.yaml -Raw) `
@@ -845,6 +845,7 @@ kubectl delete secret decision-pull-secret -n ci360-shed-hues --ignore-not-found
 *(identical on both platforms)*
 ```bash
 helm uninstall sas-marketing-decisioning -n ci360-shed-hues-sub
+helm uninstall sas-marketing-decisioning-cloudnative-pg -n cnpg-system --ignore-not-found
 # Optional full reset:
 kubectl delete pvc -n ci360-shed-hues-sub --all
 ```
@@ -861,9 +862,14 @@ kubectl delete pvc -n ci360-shed-hues-pg --all
 
 *(identical on both platforms)*
 ```bash
-helm uninstall sas-marketing-decisioning -n ci360-shed-hues-sub --ignore-not-found 2>/dev/null
-helm uninstall ci360-postgres -n ci360-shed-hues-pg --ignore-not-found 2>/dev/null
-kubectl delete namespace ci360-shed-hues ci360-shed-hues-sub ci360-shed-hues-pg --ignore-not-found
+helm uninstall sas-marketing-decisioning -n ci360-shed-hues-sub --ignore-not-found 
+helm uninstall ci360-postgres -n ci360-shed-hues-pg --ignore-not-found 
+
+helm uninstall sas-marketing-decisioning-cloudnative-pg -n cnpg-system --ignore-not-found
+
+kubectl delete namespace ci360-shed-hues ci360-shed-hues-sub ci360-shed-hues-pg cnpg-system --ignore-not-found
+
+
 ```
 *(Windows PowerShell uses `2>$null` instead of `2>/dev/null` — everything else is the same.)*
 
